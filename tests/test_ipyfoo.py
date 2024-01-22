@@ -7,4 +7,4 @@ def test_counter():
     counter.value = 10
     assert counter._esm
     assert counter.value == 10
-    cast(anywidget._file_contents.FileContents, Counter._esm)._background_thread.join()
+    cast(anywidget._file_contents.FileContents, Counter._esm).stop_thread()
