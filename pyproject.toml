@@ -1,0 +1,16 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "ipyfoo"
+version = "0.0.0"
+dependencies = ["anywidget==0.8.1"]
+
+[project.optional-dependencies]
+dev = ["watchfiles", "jupyterlab"]
+test = ["pytest"]
+
+# automatically add the dev feature to the default env (e.g., hatch shell)
+[tool.hatch.envs.default]
+features = ["dev", "test"]
